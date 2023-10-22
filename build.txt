@@ -1,0 +1,3 @@
+displayName = Aether's Blessing: Shimmer QoL
+author = BlockCrusader
+version = 1.0

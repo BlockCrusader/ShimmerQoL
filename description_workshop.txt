@@ -1,0 +1,36 @@
+[h1]Aether's Blessing: Shimmer QoL[/h1]
+
+Aether's Blessing: Shimmer QoL is a small QoL/Content mod that centers around Shimmer and its Aether minibiome. Aether's Blessing introduces; a new tooltip, an Aether pylon, the Genesis Conduit, and the Shimmer Well, each of which is detailed below;
+
+[h2]Transmutable Tooltip:[/h2]
+[list]
+    [*]Similar to the 'Material' tooltip, this new tooltip will label items that have special item transmutations
+    [*]Includes a config. options to allow condensing the 'Material' tooltip and 'Transmutable' tooltip to a single line, or to disable the new tooltip
+    [*]Note that items which shimmer into something that isn't an item (Ex: Sparkle Slime Balloon) aren't covered by this tooltip
+[/list]
+
+[h2]Aether Pylon:[/h2]
+[list]
+    [*]A new pylon that - big surprise here - corresponds to and works exclusivley in the Aether, granting quick access
+    [*]By default, it has unique sell conditions; instead of requiring NPC happiness and nearby NPC(s), it is only sold after beating the Eye of Cthulhu, and Eater of Worlds/Brain of Cthulhu
+    [*]Only 1 nearby NPC is required for the pylon to function, as opposed to the normal 2
+    [*]Includes config. options that makes the pylon sold under standard conditions and attainable from Shimmering pylons, and to customize nearby NPC requirements
+[/list]
+
+[h2]Genesis Conduit:[/h2]
+[list]
+    [*]A special crafting station obtained by Shimmering the Tinkerer's Workshop
+    [*]Can craft the same items as the Tinkerer's Workshop, and has a unique ability;
+    [*]While in the vicinity of a Genesis Conduit and the Aether, crafted weapons/tools/accessories/etc. are guaranteed strong modifiers
+    [*]Immensley hastens the process of using Shimmer de-crafting to farm good modifiers, as an alternative to paying the Goblin
+    [*]Includes config. options to customize what modifiers are rerolled by the Conduit, as well as to restrict its effects to de-craftable items or to disable the effect entirely
+[/list]
+
+[h2]Shimmer Well:[/h2]
+[list]
+    [*]A special crafting station obtained by Shimmering any Water Fountain
+    [*]Allows crafting item transmutations as an alternative to throwing items in Shimmer
+    [*]Includes config. options to require the Shimmer Well to be in the Aether to function, or to disable its crafting ability entirely
+[/list]
+
+With Aether's Blessing, you'll find the Aether a more convenient and powerful (Maybe even overpowered) asset than ever before!

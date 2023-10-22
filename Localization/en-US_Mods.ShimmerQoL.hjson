@@ -1,0 +1,166 @@
+Configs: {
+	Config: {
+		DisplayName: Config
+
+		aetherPrefixing: {
+			Label: Enable Genisis Conduit Prefixing
+			Tooltip:
+				'''
+				When set to true, this feature changes how prefixes are applied when crafting in the Aether
+				Weapons/Tools/Accessories/etc. crafted while near the Aether and a Genisis Conduit are affected
+				When crafted under these conditions, affected items will never roll certain prefixes
+				See Genisis Conduit Prefix Blacklist to learn more and customize this behavior
+				'''
+		}
+
+		prefixBlacklist: {
+			Label: Genisis Conduit Prefix Blacklist
+			Tooltip:
+				'''
+				Affects crafting while near the Aether and a Genisis Conduit
+				Under the above conditions, these prefixes won't appear when crafting items
+				By default, this list includes all vanilla prefixes except those that are 'optimal' 
+				No modded prefixes are in the list by default and must be added manually
+				Allows using Shimmer decrafting to repeatedly craft items for desired prefixes
+				'''
+		}
+
+		sellAetherPylon: {
+			Label: Sell Aether Pylon
+			Tooltip:
+				'''
+				Toggles if the Aether Pylon is accessible
+				This is a special pylon that has abnormal sell conditions;
+				It is only sold after defeating the Eye of Cthulhu and Eater of Worlds/Brain of Cthulhu
+				Furthermore, it is only sold in the Aether, but has no happiness requirement
+				'''
+		}
+
+		aetherPylonNPCS: {
+			Label: Nearby NPCs required to use Aether Pylon
+			Tooltip:
+				'''
+				Customize how many nearby NPCs are required to use the Aether Pylon
+				The Aether Pylon only functions in the Aether
+				By default it only requires 1 nearby NPC, as opposed to the normal 2
+				'''
+		}
+
+		wellCrafting: {
+			Label: Enable Aether Well Crafting
+			Tooltip:
+				'''
+				Toggles the functionality of the Aether Well
+				This is a special crafting station that allows you to craft the transmutations of items
+				Note that this doesn't include items whose shimmer result isn't an item, nor those who simply decraft
+				Turning this setting off will not make the Aether Well unobtainable, but it will disable its crafting ability
+				'''
+		}
+
+		transmuteTooltip: {
+			Label: Display Transmutation Tooltip
+			Tooltip:
+				'''
+				This mod adds a special tooltip to items that have unique transumutations when thrown in Shimmer
+				Such items are labled 'transmutable'
+				Note that this won't affect items whose shimmer result isn't an item (Ex: Sparkle Slime Balloon)
+				Use this config to toggle the 'transmutable' tooltip
+				'''
+		}
+
+		nerfPrefixing: {
+			Label: Restrict Genesis Conduit
+			Tooltip: 
+				'''
+				Tweaks the Genesis Conduit such that it can only affect items who decraft when shimmered
+				Items with special transmutations won't benefit from the Genesis Conduit while this is turned on
+				'''
+		}
+
+		compoundTooltip: {
+			Label: Compound Material and Transmutation Tooltips
+			Tooltip:
+				'''
+				Tweaks the vanilla material tooltip and 'transmutable' tooltip such that they share a line
+				If an item is both a material and transmutable, the material line is replaced with 'material, transmutable'
+				Does nothing if Display Transmutation Tooltip is off
+				'''
+		}
+
+		wellAether: {
+			Label: Require Aether Well to be used in Aether
+			Tooltip:
+				'''
+				Makes it so that Aether Well recipes require you to be in the Aether itself
+				Does nothing if Enable Aether Well Crafting is off
+				'''
+		}
+
+		easyPylon: {
+			Label: Tweaked Pylon Attainment
+			Tooltip:
+				'''
+				Changes the sell conditions of the Aether Pylon to match normal pylons
+				Also allows pylons (Except Universal) to be transmuted into an Aether Pylon
+				Pylons may still be transmuted even if Sell Aether Pylon is turned off
+				'''
+		}
+	}
+}
+
+Items: {
+	AetherPylonItem: {
+		DisplayName: Aether Pylon
+		Tooltip:
+			'''
+			Teleport to another pylon when {0} villager(s) are nearby
+			Only one can be placed, and it only functions in the Aether
+			'''
+	}
+
+	GenesisConduitItem: {
+		DisplayName: Genesis Conduit
+		Tooltip:
+			'''
+			Allows the combining of some accessories
+			When placed in the Aether, crafting near it encourages good modifiers
+			'''
+	}
+
+	ShimmerWellItem: {
+		DisplayName: Shimmer Well
+		Tooltip: Allows crafting of item transmutations without Shimmer
+	}
+}
+
+Tiles: {
+	AetherPylonTile.MapEntry: Aether Pylon
+	GenesisConduitTile.MapEntry: Genesis Conduit
+	ShimmerWellTile.MapEntry: Shimmer Well
+}
+
+CommonItemTooltip: {
+	TransmutableTip: Transmutable
+	TransumtableMaterialTip: Material, Transmutable
+	ConfigCondition: Sell Aether Pylon enabled in config
+	SimplePylonConfig: Tweaked Pylon Attainment enabled in config
+	PylonCondStandard: Sell Aether Pylon enabled in config, in the Aether, outside of evil biomes, post-Eye of Cthulhu and Eater of Worlds/Brain of Cthulhu
+	PylonCondSimple: Sell Aether Pylon and Tweaked Pylon Attainment enabled in config, in the Aether, outside of evil biomes, near another NPC, while sufficiently happy
+	PylonCondFull:
+		'''
+		Sell Aether Pylon enabled in config, Tweaked Pylon Attainment disabled in config, in the Aether, outside of evil biomes, post-Eye of Cthulhu and Eater of Worlds/Brain of Cthulhu
+		OR
+		Sell Aether Pylon and Tweaked Pylon Attainment enabled in config, in the Aether, outside of evil biomes, near another NPC, while sufficiently happy
+		'''
+	ConduitNerf: Has no effect on items which don't decraft into component materials
+	ConduitDisabled: Warning: Modifiers-affecting mechanic is currently disabled in config!
+	WellDisabled: Warning: Crafting with the Well is currently disabled in config!
+	WellNerf: Crafting with the Well requires it to be near the Aether
+}
+
+Buffs: {
+	GenesisConduitBuff: {
+		DisplayName: Genesis Spark
+		Description: Crafting near the Aether will ensure strong modifiers on gear!
+	}
+}
