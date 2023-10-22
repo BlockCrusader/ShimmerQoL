@@ -10,6 +10,6 @@ While I (BlockCrusader) am not accepting direct content contributions to the mod
 If you plan on contributing on GitHub, be aware that I personally make little usage of it; primarily out of inexperience, but also because I am the sole developer of my mods - which are passion projects - and thus have little need of version control at the moment. This repository exsists primarilly as an extra way for people to access the mod. Expect little development from myself, aside from the occasional, large push that gets this repository up to date with a new update. I know this isn't very professional - my apologies - but I am still capable of managing PRs and Issue posts.
 
 ### For more info about this mod and/or my other projects, check out the below links:
-- Aether's Blessing: Shimmmer QoL on the Steam Workshop: 
+- Aether's Blessing: Shimmmer QoL on the Steam Workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=3058372966
 - My mods thread on the Terraria Forums: https://forums.terraria.org/index.php?threads/blockcrusaders-mods.122946/
 
