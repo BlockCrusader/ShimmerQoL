@@ -9,17 +9,17 @@ Configs: {
 				When set to true, this feature changes how prefixes are applied when crafting in the Aether
 				Weapons/Tools/Accessories/etc. crafted while near the Aether and a Genisis Conduit are affected
 				When crafted under these conditions, affected items will never roll certain prefixes
-				See Genisis Conduit Prefix Blacklist to learn more and customize this behavior
+				See Genisis Conduit Prefix Whitelist to learn more and customize this behavior
 				'''
 		}
 
-		prefixBlacklist: {
-			Label: Genisis Conduit Prefix Blacklist
+		prefixWhitelist: {
+			Label: Genisis Conduit Prefix Whitelist
 			Tooltip:
 				'''
 				Affects crafting while near the Aether and a Genisis Conduit
-				Under the above conditions, these prefixes won't appear when crafting items
-				By default, this list includes all vanilla prefixes except those that are 'optimal' 
+				Under the above conditions, only these prefixes appear when crafting items
+				By default, this list includes 'optimal' vanilla prefixes (Ex: Unreal, Godly, Mythical, etc.)  
 				No modded prefixes are in the list by default and must be added manually
 				Allows using Shimmer decrafting to repeatedly craft items for desired prefixes
 				'''
@@ -30,9 +30,7 @@ Configs: {
 			Tooltip:
 				'''
 				Toggles if the Aether Pylon is accessible
-				This is a special pylon that has abnormal sell conditions;
-				It is only sold after defeating the Eye of Cthulhu and Eater of Worlds/Brain of Cthulhu
-				Furthermore, it is only sold in the Aether, but has no happiness requirement
+				It is sold under the same conditions as other Pylons, but corresponds to the Aether
 				'''
 		}
 
@@ -70,7 +68,7 @@ Configs: {
 
 		nerfPrefixing: {
 			Label: Restrict Genesis Conduit
-			Tooltip: 
+			Tooltip:
 				'''
 				Tweaks the Genesis Conduit such that it can only affect items who decraft when shimmered
 				Items with special transmutations won't benefit from the Genesis Conduit while this is turned on
@@ -96,14 +94,9 @@ Configs: {
 				'''
 		}
 
-		easyPylon: {
-			Label: Tweaked Pylon Attainment
-			Tooltip:
-				'''
-				Changes the sell conditions of the Aether Pylon to match normal pylons
-				Also allows pylons (Except Universal) to be transmuted into an Aether Pylon
-				Pylons may still be transmuted even if Sell Aether Pylon is turned off
-				'''
+		shimmerPylon: {
+			Label: Pylons transmutate into Aether Pylon
+			Tooltip: Makes it so that all vanilla Pylons except for Universal can be shimmered into the Aether Pylon
 		}
 	}
 }
@@ -142,16 +135,9 @@ Tiles: {
 CommonItemTooltip: {
 	TransmutableTip: Transmutable
 	TransumtableMaterialTip: Material, Transmutable
-	ConfigCondition: Sell Aether Pylon enabled in config
-	SimplePylonConfig: Tweaked Pylon Attainment enabled in config
-	PylonCondStandard: Sell Aether Pylon enabled in config, in the Aether, outside of evil biomes, post-Eye of Cthulhu and Eater of Worlds/Brain of Cthulhu
-	PylonCondSimple: Sell Aether Pylon and Tweaked Pylon Attainment enabled in config, in the Aether, outside of evil biomes, near another NPC, while sufficiently happy
-	PylonCondFull:
-		'''
-		Sell Aether Pylon enabled in config, Tweaked Pylon Attainment disabled in config, in the Aether, outside of evil biomes, post-Eye of Cthulhu and Eater of Worlds/Brain of Cthulhu
-		OR
-		Sell Aether Pylon and Tweaked Pylon Attainment enabled in config, in the Aether, outside of evil biomes, near another NPC, while sufficiently happy
-		'''
+	WellConfig: Aether Well Crafting enabled in config
+	PylonConfig: Sell Aether Pylon enabled in config
+	PylonCond: Sell Aether Pylon enabled in config, in the Aether, outside of evil biomes, near another NPC, while sufficiently happy
 	ConduitNerf: Has no effect on items which don't decraft into component materials
 	ConduitDisabled: Warning: Modifiers-affecting mechanic is currently disabled in config!
 	WellDisabled: Warning: Crafting with the Well is currently disabled in config!
